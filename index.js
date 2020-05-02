@@ -4,8 +4,6 @@ const path = require('path');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const app = express();
-const mongoose = require('mongoose');
-const config = require('./config');
 const http = require('http');
 const socketio = require('socket.io');
 
@@ -24,10 +22,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 server.listen(PORT, function () {
   console.log(`server is running on ${PORT}`);
-});
-
-mongoose.connect(config.mongo_url, {}, function (err) {
-  if (err) console.log(err);
 });
 
 app.use(function (req, res, next) {
