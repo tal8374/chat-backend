@@ -19,6 +19,6 @@
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "robots-parser": "^2.1.1",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.5.0"
   }
 }
